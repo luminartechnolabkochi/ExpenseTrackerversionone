@@ -23,5 +23,6 @@ router.register("api/v1/transactions",views.TransactionView,basename="transactio
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("api/v1/transactions/summary/",views.TransactionSummaryView.as_view())
 
 ]+router.urls
