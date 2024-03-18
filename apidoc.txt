@@ -44,6 +44,19 @@
 
 
 
+
+=========5) api forcreating a new user===================
+    url:http://127.0.0.1:8000/api/v1/register/
+    method:post
+    data:{
+                "username":"luminar",
+                "email":"luminar@gmail.com",
+                "password":"paswd"
+        }
+
+    authorization:nill
+
+
 ======5)api for fetching deleting specific transaction  =====================
     url:http://127.0.0.1:8000/api/v1/transactions/{id}/
     method:delete

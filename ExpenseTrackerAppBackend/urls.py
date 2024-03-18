@@ -18,11 +18,14 @@ from django.contrib import admin
 from django.urls import path
 from rest_framework.routers import DefaultRouter
 from api import views 
+from rest_framework.authtoken.views import ObtainAuthToken
 router=DefaultRouter()
 router.register("api/v1/transactions",views.TransactionView,basename="transactions")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("api/v1/transactions/summary/",views.TransactionSummaryView.as_view())
+    path("api/v1/transactions/summary/",views.TransactionSummaryView.as_view()),
+    path("api/v1/register/",views.SignUpView.as_view()),
+    path("api/v1/token/",ObtainAuthToken.as_view())
 
 ]+router.urls
